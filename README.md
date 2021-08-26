@@ -26,6 +26,9 @@ Change the values you have adjusted in the docker run command accordingly in the
   - e.g.: Fill the index file path with the absolute file path
     - `/home/$USER/git/minio-test/src/index.html`
 ## Running the NodeJS App
-  - Test: `npm run dev`
-  - Build: `npm run build`
-  - Run Built Code: `npm run start`
+  - Install Dependecies
+    - `npm install`
+  - Run the app
+    - Test: `npm run dev`
+    - Build: `npm run build`
+    - Run Built Code: `npm run start`
