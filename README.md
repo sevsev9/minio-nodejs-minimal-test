@@ -16,23 +16,24 @@ Please excuse the minimal frontend, as it was a fast test project... ;)
 
 # Running the App
 ## Starting MinIO Docker Container
-Configure the `docker_minio_run.sh` to your needs.
+Configure the `docker_minio_run.sh` to your needs:
   - Create a mount point for the virtual volume, where the MinIO container will store its files.
     - e.g.: `mkdir ~/minio`
-  - Change the mountpoint in the `docker_minio_run.sh` file.
+  - Change the mount point in the `docker_minio_run.sh` file.
     - e.g.: change the -v line to `/home/$USER/minio:/data`
-  - If needed make the shell script executable: `sudo chmod -X ./docker_minio_run.sh`
+  - If needed, make the shell script executable: `sudo chmod -X ./docker_minio_run.sh`
   - Run the `docker_minio_run.sh` or the contained statement directly.
 Create Test Bucket in your MinIO Interface
   - Default Values:
-    - Type in your Browser `localhost:9001` and log in with the default credendentials
+    - Type in your Browser `localhost:9001` and log in with the default credentials
     - Click on `Buckets`
     - Click `Create Bucket` and name it for example `test`
 ## Optional: Configuring the .env
-Change the values you have adjusted in the docker run command accordingly in the .env file.
-  - e.g.: set the MinIO Bucket property to `test`: `MINIO_BUCKET=test`
+  - First rename the `sample.env` file simply to `.env`.
+  - Change the values you have adjusted in the docker run command accordingly in the .env file.
+    - e.g.: set the MinIO Bucket property to `test`: `MINIO_BUCKET=test`
 ## Running the NodeJS App
-  - Install Dependecies
+  - Install Dependencies
     - `npm install`
   - Run the app
     - Test: `npm run dev`
