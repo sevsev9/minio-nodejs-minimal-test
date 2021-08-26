@@ -24,7 +24,7 @@ Configure the `docker_minio_run.sh` to your needs.
 ## Optional: Configuring the .env
 Change the values you have adjusted in the docker run command accordingly in the .env file.
   - e.g.: Fill the index file path with the absolute file path
-    - /home/$USER/git/minio-test/src/index.html
+    - `/home/$USER/git/minio-test/src/index.html`
 ## Running the NodeJS App
   - Test: `npm run dev`
   - Build: `npm run build`
