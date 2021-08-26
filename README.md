@@ -21,10 +21,8 @@ Configure the `docker_minio_run.sh` to your needs.
     - e.g.: change the -v line to `/home/$USER/minio:/data`
   - If needed make the shell script executable: `sudo chmod -X ./docker_minio_run.sh`
   - Run the `docker_minio_run.sh` or the contained statement directly.
-## Configuring the .env
+## Optional: Configuring the .env
 Change the values you have adjusted in the docker run command accordingly in the .env file.
-  - e.g.: Fill the index file path with the absolute file path
-    - `/home/$USER/git/minio-test/src/index.html`
 ## Running the NodeJS App
   - Install Dependecies
     - `npm install`
