@@ -1,6 +1,8 @@
 # minio-nodejs-minimal-test
 A very minimal app to test the basic functionalities of MinIO with NodeJS.
 
+Please excuse the minimal frontend, as it was a fast test project... ;)
+
 # Technologies/Libraries Used
 - [NodeJS](https://nodejs.org/en/)
 - [Typescript](https://www.typescriptlang.org/)

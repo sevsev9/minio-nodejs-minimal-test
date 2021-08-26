@@ -84,6 +84,7 @@ app.get("/download", function (request, response) {
 app.get('/favicon.ico', ((req, res) => {
     res.download('./src/img/favicon.ico');
 }));
+
 minioClient.bucketExists(process.env.MINIO_BUCKET, function (error: any) {
     if (error) {
         return console.log(error);

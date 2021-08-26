@@ -76,7 +76,6 @@
             if (confirm(`Are you sure you want to delete this file: ${name}`)) {
                 fetch(`http://localhost:8080/delete?filename=${name}`).then(res => res.text()).then(text => {
                     loadList();
-                    console.log(text);
                     alert(text);
                 });
             } else {
