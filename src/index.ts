@@ -85,11 +85,14 @@ app.get('/favicon.ico', ((req, res) => {
     res.download('./src/img/favicon.ico');
 }));
 
-minioClient.bucketExists(process.env.MINIO_BUCKET, function (error: any) {
+minioClient.bucketExists(process.env.MINIO_BUCKET!, function (error: any, exists: boolean) {
     if (error) {
         return console.log(error);
+    } else if(exists){
+        app.listen(process.env.PORT, () => {
+            console.log(`Server is running on port ${process.env.PORT}`);
+        });
+    } else {
+        return console.log(`Bucket "${process.env.MINIO_BUCKET}" doesn't exist! Please change the configuration or create the bucket.`);
     }
-    app.listen(process.env.PORT, () => {
-        console.log(`Server is running on port ${process.env.PORT}`);
-    })
 });
